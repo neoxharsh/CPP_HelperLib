@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "KeyboardListener",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "KeyboardListenerExample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-KeyboardListenerExample-Debug-88d470268d3623987497.json",
+					"name" : "KeyboardListenerExample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "KeyboardListenerlib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-KeyboardListenerlib-Debug-f81d248ce1a1bd941928.json",
+					"name" : "KeyboardListenerlib",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/PasswordConcealer/KeyboardListener/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)",
+		"source" : "D:/PasswordConcealer/KeyboardListener"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
