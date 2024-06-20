@@ -254,17 +254,23 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Dependencies for the target
+KeyboardListenerPLIB_LIB_DEPENDS:STATIC=general;-shared;general;KeyboardListenerlib;
+
 //Value Computed by CMake
 KeyboardListener_BINARY_DIR:STATIC=D:/PasswordConcealer/KeyboardListener/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)
 
 //Value Computed by CMake
 KeyboardListener_IS_TOP_LEVEL:STATIC=ON
 
-//Dependencies for the target
-KeyboardListener_LIB_DEPENDS:STATIC=general;-static;
-
 //Value Computed by CMake
 KeyboardListener_SOURCE_DIR:STATIC=D:/PasswordConcealer/KeyboardListener
+
+//Dependencies for the target
+KeyboardListenerddddPLIB_LIB_DEPENDS:STATIC=general;-shared;general;KeyboardListenerddddlib;
+
+//Dependencies for the target
+ScreenDrawerPLIB_LIB_DEPENDS:STATIC=general;-shared;general;ScreenDrawerlib;
 
 
 ########################

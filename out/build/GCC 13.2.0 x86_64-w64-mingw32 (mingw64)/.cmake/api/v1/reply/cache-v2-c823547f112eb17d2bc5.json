@@ -1322,6 +1322,18 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "KeyboardListenerPLIB_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;-shared;general;KeyboardListenerlib;"
+		},
+		{
 			"name" : "KeyboardListener_BINARY_DIR",
 			"properties" : 
 			[
@@ -1346,18 +1358,6 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "KeyboardListener_LIB_DEPENDS",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Dependencies for the target"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "general;-static;"
-		},
-		{
 			"name" : "KeyboardListener_SOURCE_DIR",
 			"properties" : 
 			[
@@ -1368,6 +1368,30 @@
 			],
 			"type" : "STATIC",
 			"value" : "D:/PasswordConcealer/KeyboardListener"
+		},
+		{
+			"name" : "KeyboardListenerddddPLIB_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;-shared;general;KeyboardListenerddddlib;"
+		},
+		{
+			"name" : "ScreenDrawerPLIB_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;-shared;general;ScreenDrawerlib;"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
