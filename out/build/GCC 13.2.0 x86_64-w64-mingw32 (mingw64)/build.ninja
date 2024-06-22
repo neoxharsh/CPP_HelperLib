@@ -41,112 +41,6 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = D$:/PasswordConcealer/KeyboardListener/out/build/GCC$ 13.2.0$ x86_64-w64-mingw32$ (mingw64)/
 # =============================================================================
-# Object build statements for SHARED_LIBRARY target KeyboardListenerlib
-
-
-#############################################
-# Order-only phony target for KeyboardListenerlib
-
-build cmake_object_order_depends_target_KeyboardListenerlib: phony || .
-
-build CMakeFiles/KeyboardListenerlib.dir/src/KeyboardListener/KeyboardListener.cpp.obj: CXX_COMPILER__KeyboardListenerlib_unscanned_Debug D$:/PasswordConcealer/KeyboardListener/src/KeyboardListener/KeyboardListener.cpp || cmake_object_order_depends_target_KeyboardListenerlib
-  DEFINES = -DKeyboardListenerlib_EXPORTS
-  DEP_FILE = CMakeFiles\KeyboardListenerlib.dir\src\KeyboardListener\KeyboardListener.cpp.obj.d
-  FLAGS = -g
-  INCLUDES = -ID:/PasswordConcealer/KeyboardListener/include -ID:/msys64/usr/include/python3.11
-  OBJECT_DIR = CMakeFiles\KeyboardListenerlib.dir
-  OBJECT_FILE_DIR = CMakeFiles\KeyboardListenerlib.dir\src\KeyboardListener
-
-
-# =============================================================================
-# Link build statements for SHARED_LIBRARY target KeyboardListenerlib
-
-
-#############################################
-# Link the shared library D:\PasswordConcealer\KeyboardListener\bin\libKeyboardListenerlib.dll
-
-build D$:/PasswordConcealer/KeyboardListener/bin/libKeyboardListenerlib.dll D$:/PasswordConcealer/KeyboardListener/libs/libKeyboardListenerlib.dll.a: CXX_SHARED_LIBRARY_LINKER__KeyboardListenerlib_Debug CMakeFiles/KeyboardListenerlib.dir/src/KeyboardListener/KeyboardListener.cpp.obj
-  LANGUAGE_COMPILE_FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\KeyboardListenerlib.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  RESTAT = 1
-  TARGET_FILE = D:\PasswordConcealer\KeyboardListener\bin\libKeyboardListenerlib.dll
-  TARGET_IMPLIB = D:\PasswordConcealer\KeyboardListener\libs\libKeyboardListenerlib.dll.a
-  TARGET_PDB = KeyboardListenerlib.dll.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target KeyboardListenerExample
-
-
-#############################################
-# Order-only phony target for KeyboardListenerExample
-
-build cmake_object_order_depends_target_KeyboardListenerExample: phony || cmake_object_order_depends_target_KeyboardListenerlib
-
-build CMakeFiles/KeyboardListenerExample.dir/examples/KeyboardListener/KeyboardListenerExample.cpp.obj: CXX_COMPILER__KeyboardListenerExample_unscanned_Debug D$:/PasswordConcealer/KeyboardListener/examples/KeyboardListener/KeyboardListenerExample.cpp || cmake_object_order_depends_target_KeyboardListenerExample
-  DEP_FILE = CMakeFiles\KeyboardListenerExample.dir\examples\KeyboardListener\KeyboardListenerExample.cpp.obj.d
-  FLAGS = -g
-  INCLUDES = -ID:/PasswordConcealer/KeyboardListener/include -ID:/msys64/usr/include/python3.11
-  OBJECT_DIR = CMakeFiles\KeyboardListenerExample.dir
-  OBJECT_FILE_DIR = CMakeFiles\KeyboardListenerExample.dir\examples\KeyboardListener
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target KeyboardListenerExample
-
-
-#############################################
-# Link the executable D:\PasswordConcealer\KeyboardListener\bin\KeyboardListenerExample.exe
-
-build D$:/PasswordConcealer/KeyboardListener/bin/KeyboardListenerExample.exe: CXX_EXECUTABLE_LINKER__KeyboardListenerExample_Debug CMakeFiles/KeyboardListenerExample.dir/examples/KeyboardListener/KeyboardListenerExample.cpp.obj | D$:/PasswordConcealer/KeyboardListener/libs/libKeyboardListenerlib.dll.a || D$:/PasswordConcealer/KeyboardListener/bin/libKeyboardListenerlib.dll
-  FLAGS = -g
-  LINK_LIBRARIES = -static  D:/PasswordConcealer/KeyboardListener/libs/libKeyboardListenerlib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\KeyboardListenerExample.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = D:\PasswordConcealer\KeyboardListener\bin\KeyboardListenerExample.exe
-  TARGET_IMPLIB = D:\PasswordConcealer\KeyboardListener\libs\libKeyboardListenerExample.dll.a
-  TARGET_PDB = KeyboardListenerExample.exe.dbg
-
-# =============================================================================
-# Object build statements for SHARED_LIBRARY target KeyboardListenerPLIB
-
-
-#############################################
-# Order-only phony target for KeyboardListenerPLIB
-
-build cmake_object_order_depends_target_KeyboardListenerPLIB: phony || cmake_object_order_depends_target_KeyboardListenerlib
-
-build CMakeFiles/KeyboardListenerPLIB.dir/python/KeyboardListener/KLPythonHelper.cpp.obj: CXX_COMPILER__KeyboardListenerPLIB_unscanned_Debug D$:/PasswordConcealer/KeyboardListener/python/KeyboardListener/KLPythonHelper.cpp || cmake_object_order_depends_target_KeyboardListenerPLIB
-  DEFINES = -DKeyboardListenerPLIB_EXPORTS
-  DEP_FILE = CMakeFiles\KeyboardListenerPLIB.dir\python\KeyboardListener\KLPythonHelper.cpp.obj.d
-  FLAGS = -g
-  INCLUDES = -ID:/PasswordConcealer/KeyboardListener/include -ID:/msys64/usr/include/python3.11
-  OBJECT_DIR = CMakeFiles\KeyboardListenerPLIB.dir
-  OBJECT_FILE_DIR = CMakeFiles\KeyboardListenerPLIB.dir\python\KeyboardListener
-
-
-# =============================================================================
-# Link build statements for SHARED_LIBRARY target KeyboardListenerPLIB
-
-
-#############################################
-# Link the shared library D:\PasswordConcealer\KeyboardListener\python\KeyboardListener\libKeyboardListenerPLIB.dll
-
-build D$:/PasswordConcealer/KeyboardListener/python/KeyboardListener/libKeyboardListenerPLIB.dll D$:/PasswordConcealer/KeyboardListener/libs/libKeyboardListenerPLIB.dll.a: CXX_SHARED_LIBRARY_LINKER__KeyboardListenerPLIB_Debug CMakeFiles/KeyboardListenerPLIB.dir/python/KeyboardListener/KLPythonHelper.cpp.obj | D$:/PasswordConcealer/KeyboardListener/libs/libKeyboardListenerlib.dll.a || D$:/PasswordConcealer/KeyboardListener/bin/libKeyboardListenerlib.dll
-  LANGUAGE_COMPILE_FLAGS = -g
-  LINK_LIBRARIES = -shared  D:/PasswordConcealer/KeyboardListener/libs/libKeyboardListenerlib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\KeyboardListenerPLIB.dir
-  POST_BUILD = C:\Windows\system32\cmd.exe /C "cd /D "D:\PasswordConcealer\KeyboardListener\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && D:\msys64\mingw64\bin\cmake.exe -E copy_if_different D:/PasswordConcealer/KeyboardListener/bin/libKeyboardListenerlib.dll D:/PasswordConcealer/KeyboardListener/python/KeyboardListener"
-  PRE_LINK = cd .
-  RESTAT = 1
-  TARGET_FILE = D:\PasswordConcealer\KeyboardListener\python\KeyboardListener\libKeyboardListenerPLIB.dll
-  TARGET_IMPLIB = D:\PasswordConcealer\KeyboardListener\libs\libKeyboardListenerPLIB.dll.a
-  TARGET_PDB = KeyboardListenerPLIB.dll.dbg
-
-# =============================================================================
 # Object build statements for SHARED_LIBRARY target ScreenDrawerlib
 
 
@@ -173,7 +67,7 @@ build CMakeFiles/ScreenDrawerlib.dir/src/ScreenDrawer/ScreenDrawer.cpp.obj: CXX_
 
 build D$:/PasswordConcealer/KeyboardListener/bin/libScreenDrawerlib.dll D$:/PasswordConcealer/KeyboardListener/libs/libScreenDrawerlib.dll.a: CXX_SHARED_LIBRARY_LINKER__ScreenDrawerlib_Debug CMakeFiles/ScreenDrawerlib.dir/src/ScreenDrawer/ScreenDrawer.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -lgdiplus  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ScreenDrawerlib.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -208,49 +102,13 @@ build CMakeFiles/ScreenDrawerExample.dir/examples/ScreenDrawer/ScreenDrawerExamp
 
 build D$:/PasswordConcealer/KeyboardListener/bin/ScreenDrawerExample.exe: CXX_EXECUTABLE_LINKER__ScreenDrawerExample_Debug CMakeFiles/ScreenDrawerExample.dir/examples/ScreenDrawer/ScreenDrawerExample.cpp.obj | D$:/PasswordConcealer/KeyboardListener/libs/libScreenDrawerlib.dll.a || D$:/PasswordConcealer/KeyboardListener/bin/libScreenDrawerlib.dll
   FLAGS = -g
-  LINK_LIBRARIES = -static  D:/PasswordConcealer/KeyboardListener/libs/libScreenDrawerlib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -static  D:/PasswordConcealer/KeyboardListener/libs/libScreenDrawerlib.dll.a  -lgdiplus  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ScreenDrawerExample.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   TARGET_FILE = D:\PasswordConcealer\KeyboardListener\bin\ScreenDrawerExample.exe
   TARGET_IMPLIB = D:\PasswordConcealer\KeyboardListener\libs\libScreenDrawerExample.dll.a
   TARGET_PDB = ScreenDrawerExample.exe.dbg
-
-# =============================================================================
-# Object build statements for SHARED_LIBRARY target ScreenDrawerPLIB
-
-
-#############################################
-# Order-only phony target for ScreenDrawerPLIB
-
-build cmake_object_order_depends_target_ScreenDrawerPLIB: phony || cmake_object_order_depends_target_ScreenDrawerlib
-
-build CMakeFiles/ScreenDrawerPLIB.dir/python/ScreenDrawer/SDPythonHelper.cpp.obj: CXX_COMPILER__ScreenDrawerPLIB_unscanned_Debug D$:/PasswordConcealer/KeyboardListener/python/ScreenDrawer/SDPythonHelper.cpp || cmake_object_order_depends_target_ScreenDrawerPLIB
-  DEFINES = -DScreenDrawerPLIB_EXPORTS
-  DEP_FILE = CMakeFiles\ScreenDrawerPLIB.dir\python\ScreenDrawer\SDPythonHelper.cpp.obj.d
-  FLAGS = -g
-  INCLUDES = -ID:/PasswordConcealer/KeyboardListener/include -ID:/msys64/usr/include/python3.11
-  OBJECT_DIR = CMakeFiles\ScreenDrawerPLIB.dir
-  OBJECT_FILE_DIR = CMakeFiles\ScreenDrawerPLIB.dir\python\ScreenDrawer
-
-
-# =============================================================================
-# Link build statements for SHARED_LIBRARY target ScreenDrawerPLIB
-
-
-#############################################
-# Link the shared library D:\PasswordConcealer\KeyboardListener\python\ScreenDrawer\libScreenDrawerPLIB.dll
-
-build D$:/PasswordConcealer/KeyboardListener/python/ScreenDrawer/libScreenDrawerPLIB.dll D$:/PasswordConcealer/KeyboardListener/libs/libScreenDrawerPLIB.dll.a: CXX_SHARED_LIBRARY_LINKER__ScreenDrawerPLIB_Debug CMakeFiles/ScreenDrawerPLIB.dir/python/ScreenDrawer/SDPythonHelper.cpp.obj | D$:/PasswordConcealer/KeyboardListener/libs/libScreenDrawerlib.dll.a || D$:/PasswordConcealer/KeyboardListener/bin/libScreenDrawerlib.dll
-  LANGUAGE_COMPILE_FLAGS = -g
-  LINK_LIBRARIES = -shared  D:/PasswordConcealer/KeyboardListener/libs/libScreenDrawerlib.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\ScreenDrawerPLIB.dir
-  POST_BUILD = C:\Windows\system32\cmd.exe /C "cd /D "D:\PasswordConcealer\KeyboardListener\out\build\GCC 13.2.0 x86_64-w64-mingw32 (mingw64)" && D:\msys64\mingw64\bin\cmake.exe -E copy_if_different D:/PasswordConcealer/KeyboardListener/bin/libScreenDrawerlib.dll D:/PasswordConcealer/KeyboardListener/python/ScreenDrawer"
-  PRE_LINK = cd .
-  RESTAT = 1
-  TARGET_FILE = D:\PasswordConcealer\KeyboardListener\python\ScreenDrawer\libScreenDrawerPLIB.dll
-  TARGET_IMPLIB = D:\PasswordConcealer\KeyboardListener\libs\libScreenDrawerPLIB.dll.a
-  TARGET_PDB = ScreenDrawerPLIB.dll.dbg
 
 
 #############################################
@@ -278,27 +136,11 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build KeyboardListenerExample: phony D$:/PasswordConcealer/KeyboardListener/bin/KeyboardListenerExample.exe
-
-build KeyboardListenerExample.exe: phony D$:/PasswordConcealer/KeyboardListener/bin/KeyboardListenerExample.exe
-
-build KeyboardListenerPLIB: phony D$:/PasswordConcealer/KeyboardListener/python/KeyboardListener/libKeyboardListenerPLIB.dll
-
-build KeyboardListenerlib: phony D$:/PasswordConcealer/KeyboardListener/bin/libKeyboardListenerlib.dll
-
 build ScreenDrawerExample: phony D$:/PasswordConcealer/KeyboardListener/bin/ScreenDrawerExample.exe
 
 build ScreenDrawerExample.exe: phony D$:/PasswordConcealer/KeyboardListener/bin/ScreenDrawerExample.exe
 
-build ScreenDrawerPLIB: phony D$:/PasswordConcealer/KeyboardListener/python/ScreenDrawer/libScreenDrawerPLIB.dll
-
 build ScreenDrawerlib: phony D$:/PasswordConcealer/KeyboardListener/bin/libScreenDrawerlib.dll
-
-build libKeyboardListenerPLIB.dll: phony D$:/PasswordConcealer/KeyboardListener/python/KeyboardListener/libKeyboardListenerPLIB.dll
-
-build libKeyboardListenerlib.dll: phony D$:/PasswordConcealer/KeyboardListener/bin/libKeyboardListenerlib.dll
-
-build libScreenDrawerPLIB.dll: phony D$:/PasswordConcealer/KeyboardListener/python/ScreenDrawer/libScreenDrawerPLIB.dll
 
 build libScreenDrawerlib.dll: phony D$:/PasswordConcealer/KeyboardListener/bin/libScreenDrawerlib.dll
 
@@ -310,7 +152,7 @@ build libScreenDrawerlib.dll: phony D$:/PasswordConcealer/KeyboardListener/bin/l
 #############################################
 # Folder: D:/PasswordConcealer/KeyboardListener/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)
 
-build all: phony D$:/PasswordConcealer/KeyboardListener/bin/libKeyboardListenerlib.dll D$:/PasswordConcealer/KeyboardListener/bin/KeyboardListenerExample.exe D$:/PasswordConcealer/KeyboardListener/python/KeyboardListener/libKeyboardListenerPLIB.dll D$:/PasswordConcealer/KeyboardListener/bin/libScreenDrawerlib.dll D$:/PasswordConcealer/KeyboardListener/bin/ScreenDrawerExample.exe D$:/PasswordConcealer/KeyboardListener/python/ScreenDrawer/libScreenDrawerPLIB.dll
+build all: phony D$:/PasswordConcealer/KeyboardListener/bin/libScreenDrawerlib.dll D$:/PasswordConcealer/KeyboardListener/bin/ScreenDrawerExample.exe
 
 # =============================================================================
 # Unknown Build Time Dependencies.
