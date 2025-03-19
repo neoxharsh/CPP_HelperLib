@@ -4,6 +4,8 @@
 #include <windows.h>
 #include <gdiplus.h>
 #include <thread>
+#include <unordered_map>
+#include <functional>
 
 #define WINDOW_HANDLE_FIRST        ((HWND)0)
 #define WINDOW_HANDLE_LAST         ((HWND)1)
@@ -17,8 +19,8 @@ public:
     ScreenDrawer(HINSTANCE hInstance);
     ~ScreenDrawer();
     
-    void createWindowF(const char *CLASS_NAME);
-    void createWindow(const char *CLASS_NAME, int width, int height);
+    void createWindowF(const char *WindowName);
+    void createWindow(const char *WindowName, int width, int height);
     void setDrawFunction(void (*drawFunction)(Gdiplus::Graphics *graphics, int screenWidth, int screenHeight));
     void setZOrder(HWND hwndInsertAfter);
     void updateScreen();
@@ -26,18 +28,26 @@ public:
     void hideNotificationBar();
     bool isWindowRunning();
     void destroyWindow();
+    
+    void addMenuItem(UINT uIDNewItem, const char *lpNewItem, std::function<void()> callback);
+    void addMenuSeparator();
 
 private:
-    void _createWindow(const char *CLASS_NAME, int width, int height);
+    void _createWindow(const char *WindowName, int width, int height);
     static LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
     void CreateLayeredWindow(HWND hwnd, int width, int height, void (*drawFunction)(Gdiplus::Graphics *graphics, int screenWidth, int screenHeight));
     void InitTrayIcon();
     void ShowTrayMenu(HWND hwnd);
-
+    
+    char* CLASS_NAME = "";
+    char* WINDOW_NAME = "";
+    HMENU hMenu;
     HINSTANCE hInstance;
     HWND windowsHandle = NULL;
     ULONG_PTR gdiplusToken;
     Gdiplus::GdiplusStartupInput gdiplusStartupInput;
+    std::unordered_map<UINT, std::function<void()>> menuCallbacks;
+    std::unordered_map<UINT, const char*> menuItems;
     bool isRunnnig = false;
     int screenWidth = 0;
     int screenHeight = 0;

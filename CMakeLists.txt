@@ -40,6 +40,9 @@ if(SCREEN_DRAWER_LIBRARY)
     add_executable(${LIB_NAME}Example examples/${LIB_NAME}/ScreenDrawerExample.cpp)
     target_link_libraries(${LIB_NAME}Example -static ${LIB_NAME}lib)
 
+    add_executable(${LIB_NAME}ExampleSimple examples/${LIB_NAME}/ScreenDrawerExampleSimple.cpp)
+    target_link_libraries(${LIB_NAME}ExampleSimple -static ${LIB_NAME}lib)
+
     # add_library(${LIB_NAME}PLIB SHARED python/${LIB_NAME}/SDPythonHelper.cpp)
     # target_link_libraries(${LIB_NAME}PLIB  -shared ${LIB_NAME}lib)
     # set_target_properties(${LIB_NAME}PLIB PROPERTIES

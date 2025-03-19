@@ -8,6 +8,10 @@
 #define WM_CUSTOM_DRAW (WM_USER + 1)
 #define WM_TRAYICON (WM_USER + 2)
 #define IDM_EXIT 1000
+#define IDM_TOPMOST 1001
+#define IDM_NOTOPMOST 1002
+#define IDM_FIRST 1003
+#define IDM_LAST 1004
 
 ScreenDrawer::ScreenDrawer(HINSTANCE hInstance) : hInstance(hInstance)
 {
@@ -60,7 +64,11 @@ void ScreenDrawer::_createWindow(const char *CLASS_NAME, int width, int height)
     wc.hInstance = hInstance;
     wc.lpszClassName = CLASS_NAME;
     wc.hbrBackground = (HBRUSH)GetStockObject(NULL_BRUSH);
-
+     // Convert to std::string
+     std::string str = CLASS_NAME;
+    
+     // Convert std::string to char*
+     this->CLASS_NAME = &str[0];
     if (!RegisterClass(&wc))
     {
         throw std::runtime_error("Failed to register window class");
@@ -69,7 +77,7 @@ void ScreenDrawer::_createWindow(const char *CLASS_NAME, int width, int height)
     windowsHandle = CreateWindowEx(
         WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOOLWINDOW,
         CLASS_NAME,
-        "ScreenDrawer",
+        CLASS_NAME,
         WS_POPUP,
         CW_USEDEFAULT, CW_USEDEFAULT, width, height,
         NULL,
@@ -154,6 +162,10 @@ LRESULT CALLBACK ScreenDrawer::WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, L
 
     case WM_COMMAND:
     {
+        if (pThis && pThis->menuCallbacks.find(LOWORD(wParam)) != pThis->menuCallbacks.end())
+        {
+            pThis->menuCallbacks[LOWORD(wParam)]();
+        }
         if (LOWORD(wParam) == IDM_EXIT)
         {
             pThis->isRunnnig = false;
@@ -248,14 +260,23 @@ void ScreenDrawer::InitTrayIcon()
     nid.uFlags = NIF_ICON | NIF_MESSAGE | NIF_TIP;
     nid.uCallbackMessage = WM_TRAYICON;
     nid.hIcon = LoadIcon(NULL, IDI_APPLICATION);
-    StringCchCopy(nid.szTip, ARRAYSIZE(nid.szTip), "ScreenDrawer");
+    StringCchCopy(nid.szTip, ARRAYSIZE(nid.szTip), CLASS_NAME);
 }
 
 void ScreenDrawer::ShowTrayMenu(HWND hwnd)
 {
-    HMENU hMenu = CreatePopupMenu();
+    hMenu = CreatePopupMenu();
+    for (auto &item : menuItems)
+    {
+        AppendMenu(hMenu, MF_STRING, item.first,item.second );
+    }
+    AppendMenu(hMenu, MF_SEPARATOR, 0, NULL);
+    AppendMenu(hMenu, MF_STRING, IDM_TOPMOST, "Top Most");
+    AppendMenu(hMenu, MF_STRING, IDM_NOTOPMOST, "Not Top Most");
+    AppendMenu(hMenu, MF_STRING, IDM_FIRST, "First");
+    AppendMenu(hMenu, MF_STRING, IDM_LAST, "Last");
+    AppendMenu(hMenu, MF_SEPARATOR, 0, NULL);
     AppendMenu(hMenu, MF_STRING, IDM_EXIT, "Exit");
-
     POINT pt;
     GetCursorPos(&pt);
     SetForegroundWindow(hwnd);
@@ -274,5 +295,20 @@ void ScreenDrawer::destroyWindow()
     {
         DestroyWindow(windowsHandle);
         isRunnnig = false;
+    }
+}
+
+void ScreenDrawer::addMenuItem(UINT uIDNewItem, const char *lpNewItem, std::function<void()> callback)
+{
+    
+         menuItems[uIDNewItem] = lpNewItem;
+        menuCallbacks[uIDNewItem] = callback;
+    
+}
+void ScreenDrawer::addMenuSeparator()
+{
+    if (hMenu)
+    {
+        AppendMenu(hMenu, MF_SEPARATOR, 0, NULL);
     }
 }

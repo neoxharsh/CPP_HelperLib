@@ -1,13 +1,11 @@
 # ninja log v6
-1670	1793	7407243359962413	D:/PasswordConcealer/KeyboardListener/libs/libScreenDrawerPLIB.dll.a	a25bc8c1eadb34f5
-1578	1666	7407245047119071	D:/PasswordConcealer/KeyboardListener/bin/libScreenDrawerlib.dll	c63f3c6bdc497a3f
-1578	1666	7407245047119071	D:/PasswordConcealer/KeyboardListener/libs/libScreenDrawerlib.dll.a	c63f3c6bdc497a3f
-14	1578	7407245030670733	CMakeFiles/ScreenDrawerlib.dir/src/ScreenDrawer/ScreenDrawer.cpp.obj	40d94de462b5995d
-2003	2105	7407225870031548	D:/PasswordConcealer/KeyboardListener/libs/libKeyboardListenerlib.dll.a	36b9829e2eb4ce74
+45	2246	7639963195345036	CMakeFiles/ScreenDrawerlib.dir/src/ScreenDrawer/ScreenDrawer.cpp.obj	cda0958464c2fffe
+2247	2421	7639963218990432	D:/Project/CPP_HelperLib/bin/libScreenDrawerlib.dll	80ad59742c84098d
 26	70	7407231125343332	CMakeFiles/ScreenDrawerPLIB.dir/python/ScreenDrawer/SDPythonHelper.cpp.obj	2f92f7dfc4840cf3
-1666	1869	7407245047189125	D:/PasswordConcealer/KeyboardListener/bin/ScreenDrawerExample.exe	98896eb698190e7
-104	226	7405944511220359	D:/PasswordConcealer/KeyboardListener/libs/libKeyboardListenerPLIB.dll.a	6b59803491f82a3c
-18	1603	7407244816811245	CMakeFiles/ScreenDrawerExample.dir/examples/ScreenDrawer/ScreenDrawerExample.cpp.obj	dd3398c1e9035c7a
-2003	2105	7407225870031548	D:/PasswordConcealer/KeyboardListener/bin/libKeyboardListenerlib.dll	36b9829e2eb4ce74
-15	1601	7407250888259981	CMakeFiles/ScreenDrawerExample.dir/examples/ScreenDrawer/ScreenDrawerExample.cpp.obj	dd3398c1e9035c7a
-1601	1799	7407250904118811	D:/PasswordConcealer/KeyboardListener/bin/ScreenDrawerExample.exe	98896eb698190e7
+2421	2722	7639963219110881	D:/Project/CPP_HelperLib/bin/ScreenDrawerExample.exe	f2ded1ef03e4df43
+12	1958	7639961299756335	CMakeFiles/ScreenDrawerExample.dir/examples/ScreenDrawer/ScreenDrawerExample.cpp.obj	7927e1a9efbda939
+5	2012	7639963597526528	CMakeFiles/ScreenDrawerExampleSimple.dir/examples/ScreenDrawer/ScreenDrawerExampleSimple.cpp.obj	149a65ccc687a722
+2247	2421	7639963218990432	D:/Project/CPP_HelperLib/libs/libScreenDrawerlib.dll.a	80ad59742c84098d
+2012	2257	7639963617597864	D:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimple.exe	d1ae899a4b70cd85
+70	3893	7640548200545566	CMakeFiles/ScreenDrawerExampleSimple.dir/examples/ScreenDrawer/ScreenDrawerExampleSimple.cpp.obj	149a65ccc687a722
+3894	4646	7640548238781638	D:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimple.exe	d1ae899a4b70cd85
