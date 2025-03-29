@@ -34,33 +34,16 @@ void printHello(){
 
 int main()
 {
-    HINSTANCE hInstance = GetModuleHandle(NULL);
-    try
+   
+    ScreenDrawer screenDrawer("ScreenDrawerExampleSimple",10, drawFunction);
+    int i = 0;
+    while (true)
     {
-        screenDrawer = new ScreenDrawer(hInstance);
-        screenDrawer->setDrawFunction(drawFunction);
-        screenDrawer->createWindowF("Window 1");
-        screenDrawer->setZOrder(WINDOW_HANDLE_TOPMOST);
-        screenDrawer->updateScreen();
-        screenDrawer->showNotificationBar();
-        screenDrawer->addMenuItem(1, "Hello", printHello);
-        std::thread updateThread([screenDrawer]()
-                                 {
-            while (screenDrawer->isWindowRunning())
-            {
-                screenDrawer->updateScreen();
-                std::this_thread::sleep_for(std::chrono::milliseconds(10));
-            } });
-        updateThread.join();
-        screenDrawer->destroyWindow();
+        std::cout << i << std::endl;
+        i++;
+        Sleep(1000);
     }
-    catch (const std::runtime_error &e)
-    {
-        std::cerr << e.what() << std::endl;
-        return 1;
-    }
-
-
+    
 
     return 0;
 }

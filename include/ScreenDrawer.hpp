@@ -16,9 +16,9 @@
 class ScreenDrawer
 {
 public:
-    ScreenDrawer(HINSTANCE hInstance);
-    ~ScreenDrawer();
     
+    ~ScreenDrawer();
+    ScreenDrawer(const char* CLASS_NAME, int updateInterval, void (*drawFunction)(Gdiplus::Graphics *graphics, int screenWidth, int screenHeight));
     void createWindowF(const char *WindowName);
     void createWindow(const char *WindowName, int width, int height);
     void setDrawFunction(void (*drawFunction)(Gdiplus::Graphics *graphics, int screenWidth, int screenHeight));
@@ -28,17 +28,19 @@ public:
     void hideNotificationBar();
     bool isWindowRunning();
     void destroyWindow();
+    void joinMainThread();
     
     void addMenuItem(UINT uIDNewItem, const char *lpNewItem, std::function<void()> callback);
     void addMenuSeparator();
 
 private:
+    ScreenDrawer(HINSTANCE hInstance);
     void _createWindow(const char *WindowName, int width, int height);
     static LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
     void CreateLayeredWindow(HWND hwnd, int width, int height, void (*drawFunction)(Gdiplus::Graphics *graphics, int screenWidth, int screenHeight));
     void InitTrayIcon();
     void ShowTrayMenu(HWND hwnd);
-    
+    std::thread* updateThread = nullptr;
     char* CLASS_NAME = "";
     char* WINDOW_NAME = "";
     HMENU hMenu;

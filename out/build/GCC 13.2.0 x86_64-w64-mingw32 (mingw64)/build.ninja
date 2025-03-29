@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: KeyboardListener
+# Project: CPPHelperLibs
 # Configurations: Debug
 # =============================================================================
 
@@ -41,43 +41,189 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = D$:/Project/CPP_HelperLib/out/build/GCC$ 13.2.0$ x86_64-w64-mingw32$ (mingw64)/
 # =============================================================================
-# Object build statements for SHARED_LIBRARY target ScreenDrawerlib
+# Object build statements for SHARED_LIBRARY target KeyboardListenerlibShared
 
 
 #############################################
-# Order-only phony target for ScreenDrawerlib
+# Order-only phony target for KeyboardListenerlibShared
 
-build cmake_object_order_depends_target_ScreenDrawerlib: phony || .
+build cmake_object_order_depends_target_KeyboardListenerlibShared: phony || .
 
-build CMakeFiles/ScreenDrawerlib.dir/src/ScreenDrawer/ScreenDrawer.cpp.obj: CXX_COMPILER__ScreenDrawerlib_unscanned_Debug D$:/Project/CPP_HelperLib/src/ScreenDrawer/ScreenDrawer.cpp || cmake_object_order_depends_target_ScreenDrawerlib
-  DEFINES = -DScreenDrawerlib_EXPORTS
-  DEP_FILE = CMakeFiles\ScreenDrawerlib.dir\src\ScreenDrawer\ScreenDrawer.cpp.obj.d
+build CMakeFiles/KeyboardListenerlibShared.dir/src/KeyboardListener/KeyboardListener.cpp.obj: CXX_COMPILER__KeyboardListenerlibShared_unscanned_Debug D$:/Project/CPP_HelperLib/src/KeyboardListener/KeyboardListener.cpp || cmake_object_order_depends_target_KeyboardListenerlibShared
+  DEFINES = -DKeyboardListenerlibShared_EXPORTS
+  DEP_FILE = CMakeFiles\KeyboardListenerlibShared.dir\src\KeyboardListener\KeyboardListener.cpp.obj.d
   FLAGS = -g
   INCLUDES = -ID:/Project/CPP_HelperLib/include -ID:/msys64/usr/include/python3.11
-  OBJECT_DIR = CMakeFiles\ScreenDrawerlib.dir
-  OBJECT_FILE_DIR = CMakeFiles\ScreenDrawerlib.dir\src\ScreenDrawer
-  TARGET_COMPILE_PDB = CMakeFiles\ScreenDrawerlib.dir\
-  TARGET_PDB = D:\Project\CPP_HelperLib\bin\libScreenDrawerlib.pdb
+  OBJECT_DIR = CMakeFiles\KeyboardListenerlibShared.dir
+  OBJECT_FILE_DIR = CMakeFiles\KeyboardListenerlibShared.dir\src\KeyboardListener
+  TARGET_COMPILE_PDB = CMakeFiles\KeyboardListenerlibShared.dir\
+  TARGET_PDB = D:\Project\CPP_HelperLib\bin\libKeyboardListenerlibShared.pdb
 
 
 # =============================================================================
-# Link build statements for SHARED_LIBRARY target ScreenDrawerlib
+# Link build statements for SHARED_LIBRARY target KeyboardListenerlibShared
 
 
 #############################################
-# Link the shared library D:\Project\CPP_HelperLib\bin\libScreenDrawerlib.dll
+# Link the shared library D:\Project\CPP_HelperLib\bin\libKeyboardListenerlibShared.dll
 
-build D$:/Project/CPP_HelperLib/bin/libScreenDrawerlib.dll D$:/Project/CPP_HelperLib/libs/libScreenDrawerlib.dll.a: CXX_SHARED_LIBRARY_LINKER__ScreenDrawerlib_Debug CMakeFiles/ScreenDrawerlib.dir/src/ScreenDrawer/ScreenDrawer.cpp.obj
+build D$:/Project/CPP_HelperLib/bin/libKeyboardListenerlibShared.dll D$:/Project/CPP_HelperLib/libs/libKeyboardListenerlibShared.dll.a: CXX_SHARED_LIBRARY_LINKER__KeyboardListenerlibShared_Debug CMakeFiles/KeyboardListenerlibShared.dir/src/KeyboardListener/KeyboardListener.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
-  LINK_LIBRARIES = -lgdiplus  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\ScreenDrawerlib.dir
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\KeyboardListenerlibShared.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_COMPILE_PDB = CMakeFiles\ScreenDrawerlib.dir\
-  TARGET_FILE = D:\Project\CPP_HelperLib\bin\libScreenDrawerlib.dll
-  TARGET_IMPLIB = D:\Project\CPP_HelperLib\libs\libScreenDrawerlib.dll.a
-  TARGET_PDB = D:\Project\CPP_HelperLib\bin\libScreenDrawerlib.pdb
+  TARGET_COMPILE_PDB = CMakeFiles\KeyboardListenerlibShared.dir\
+  TARGET_FILE = D:\Project\CPP_HelperLib\bin\libKeyboardListenerlibShared.dll
+  TARGET_IMPLIB = D:\Project\CPP_HelperLib\libs\libKeyboardListenerlibShared.dll.a
+  TARGET_PDB = D:\Project\CPP_HelperLib\bin\libKeyboardListenerlibShared.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target KeyboardListenerlibStatic
+
+
+#############################################
+# Order-only phony target for KeyboardListenerlibStatic
+
+build cmake_object_order_depends_target_KeyboardListenerlibStatic: phony || .
+
+build CMakeFiles/KeyboardListenerlibStatic.dir/src/KeyboardListener/KeyboardListener.cpp.obj: CXX_COMPILER__KeyboardListenerlibStatic_unscanned_Debug D$:/Project/CPP_HelperLib/src/KeyboardListener/KeyboardListener.cpp || cmake_object_order_depends_target_KeyboardListenerlibStatic
+  DEP_FILE = CMakeFiles\KeyboardListenerlibStatic.dir\src\KeyboardListener\KeyboardListener.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -ID:/Project/CPP_HelperLib/include -ID:/msys64/usr/include/python3.11
+  OBJECT_DIR = CMakeFiles\KeyboardListenerlibStatic.dir
+  OBJECT_FILE_DIR = CMakeFiles\KeyboardListenerlibStatic.dir\src\KeyboardListener
+  TARGET_COMPILE_PDB = CMakeFiles\KeyboardListenerlibStatic.dir\KeyboardListenerlibStatic.pdb
+  TARGET_PDB = D:\Project\CPP_HelperLib\libs\libKeyboardListenerlibStatic.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target KeyboardListenerlibStatic
+
+
+#############################################
+# Link the static library D:\Project\CPP_HelperLib\libs\libKeyboardListenerlibStatic.a
+
+build D$:/Project/CPP_HelperLib/libs/libKeyboardListenerlibStatic.a: CXX_STATIC_LIBRARY_LINKER__KeyboardListenerlibStatic_Debug CMakeFiles/KeyboardListenerlibStatic.dir/src/KeyboardListener/KeyboardListener.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles\KeyboardListenerlibStatic.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\KeyboardListenerlibStatic.dir\KeyboardListenerlibStatic.pdb
+  TARGET_FILE = D:\Project\CPP_HelperLib\libs\libKeyboardListenerlibStatic.a
+  TARGET_PDB = D:\Project\CPP_HelperLib\libs\libKeyboardListenerlibStatic.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target KeyboardListenerExample
+
+
+#############################################
+# Order-only phony target for KeyboardListenerExample
+
+build cmake_object_order_depends_target_KeyboardListenerExample: phony || cmake_object_order_depends_target_KeyboardListenerlibStatic
+
+build CMakeFiles/KeyboardListenerExample.dir/examples/KeyboardListener/KeyboardListenerExample.cpp.obj: CXX_COMPILER__KeyboardListenerExample_unscanned_Debug D$:/Project/CPP_HelperLib/examples/KeyboardListener/KeyboardListenerExample.cpp || cmake_object_order_depends_target_KeyboardListenerExample
+  DEP_FILE = CMakeFiles\KeyboardListenerExample.dir\examples\KeyboardListener\KeyboardListenerExample.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -ID:/Project/CPP_HelperLib/include -ID:/msys64/usr/include/python3.11
+  OBJECT_DIR = CMakeFiles\KeyboardListenerExample.dir
+  OBJECT_FILE_DIR = CMakeFiles\KeyboardListenerExample.dir\examples\KeyboardListener
+  TARGET_COMPILE_PDB = CMakeFiles\KeyboardListenerExample.dir\
+  TARGET_PDB = D:\Project\CPP_HelperLib\bin\KeyboardListenerExample.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target KeyboardListenerExample
+
+
+#############################################
+# Link the executable D:\Project\CPP_HelperLib\bin\KeyboardListenerExample.exe
+
+build D$:/Project/CPP_HelperLib/bin/KeyboardListenerExample.exe: CXX_EXECUTABLE_LINKER__KeyboardListenerExample_Debug CMakeFiles/KeyboardListenerExample.dir/examples/KeyboardListener/KeyboardListenerExample.cpp.obj | D$:/Project/CPP_HelperLib/libs/libKeyboardListenerlibStatic.a || D$:/Project/CPP_HelperLib/libs/libKeyboardListenerlibStatic.a
+  FLAGS = -g
+  LINK_LIBRARIES = -static  D:/Project/CPP_HelperLib/libs/libKeyboardListenerlibStatic.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\KeyboardListenerExample.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\KeyboardListenerExample.dir\
+  TARGET_FILE = D:\Project\CPP_HelperLib\bin\KeyboardListenerExample.exe
+  TARGET_IMPLIB = D:\Project\CPP_HelperLib\libs\libKeyboardListenerExample.dll.a
+  TARGET_PDB = D:\Project\CPP_HelperLib\bin\KeyboardListenerExample.pdb
+
+# =============================================================================
+# Object build statements for SHARED_LIBRARY target ScreenDrawerlibShared
+
+
+#############################################
+# Order-only phony target for ScreenDrawerlibShared
+
+build cmake_object_order_depends_target_ScreenDrawerlibShared: phony || .
+
+build CMakeFiles/ScreenDrawerlibShared.dir/src/ScreenDrawer/ScreenDrawer.cpp.obj: CXX_COMPILER__ScreenDrawerlibShared_unscanned_Debug D$:/Project/CPP_HelperLib/src/ScreenDrawer/ScreenDrawer.cpp || cmake_object_order_depends_target_ScreenDrawerlibShared
+  DEFINES = -DScreenDrawerlibShared_EXPORTS
+  DEP_FILE = CMakeFiles\ScreenDrawerlibShared.dir\src\ScreenDrawer\ScreenDrawer.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -ID:/Project/CPP_HelperLib/include -ID:/msys64/usr/include/python3.11
+  OBJECT_DIR = CMakeFiles\ScreenDrawerlibShared.dir
+  OBJECT_FILE_DIR = CMakeFiles\ScreenDrawerlibShared.dir\src\ScreenDrawer
+  TARGET_COMPILE_PDB = CMakeFiles\ScreenDrawerlibShared.dir\
+  TARGET_PDB = D:\Project\CPP_HelperLib\bin\libScreenDrawerlibShared.pdb
+
+
+# =============================================================================
+# Link build statements for SHARED_LIBRARY target ScreenDrawerlibShared
+
+
+#############################################
+# Link the shared library D:\Project\CPP_HelperLib\bin\libScreenDrawerlibShared.dll
+
+build D$:/Project/CPP_HelperLib/bin/libScreenDrawerlibShared.dll D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibShared.dll.a: CXX_SHARED_LIBRARY_LINKER__ScreenDrawerlibShared_Debug CMakeFiles/ScreenDrawerlibShared.dir/src/ScreenDrawer/ScreenDrawer.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  LINK_LIBRARIES = -lgdiplus  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\ScreenDrawerlibShared.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  RESTAT = 1
+  TARGET_COMPILE_PDB = CMakeFiles\ScreenDrawerlibShared.dir\
+  TARGET_FILE = D:\Project\CPP_HelperLib\bin\libScreenDrawerlibShared.dll
+  TARGET_IMPLIB = D:\Project\CPP_HelperLib\libs\libScreenDrawerlibShared.dll.a
+  TARGET_PDB = D:\Project\CPP_HelperLib\bin\libScreenDrawerlibShared.pdb
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target ScreenDrawerlibStatic
+
+
+#############################################
+# Order-only phony target for ScreenDrawerlibStatic
+
+build cmake_object_order_depends_target_ScreenDrawerlibStatic: phony || .
+
+build CMakeFiles/ScreenDrawerlibStatic.dir/src/ScreenDrawer/ScreenDrawer.cpp.obj: CXX_COMPILER__ScreenDrawerlibStatic_unscanned_Debug D$:/Project/CPP_HelperLib/src/ScreenDrawer/ScreenDrawer.cpp || cmake_object_order_depends_target_ScreenDrawerlibStatic
+  DEP_FILE = CMakeFiles\ScreenDrawerlibStatic.dir\src\ScreenDrawer\ScreenDrawer.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -ID:/Project/CPP_HelperLib/include -ID:/msys64/usr/include/python3.11
+  OBJECT_DIR = CMakeFiles\ScreenDrawerlibStatic.dir
+  OBJECT_FILE_DIR = CMakeFiles\ScreenDrawerlibStatic.dir\src\ScreenDrawer
+  TARGET_COMPILE_PDB = CMakeFiles\ScreenDrawerlibStatic.dir\ScreenDrawerlibStatic.pdb
+  TARGET_PDB = D:\Project\CPP_HelperLib\libs\libScreenDrawerlibStatic.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target ScreenDrawerlibStatic
+
+
+#############################################
+# Link the static library D:\Project\CPP_HelperLib\libs\libScreenDrawerlibStatic.a
+
+build D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a: CXX_STATIC_LIBRARY_LINKER__ScreenDrawerlibStatic_Debug CMakeFiles/ScreenDrawerlibStatic.dir/src/ScreenDrawer/ScreenDrawer.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles\ScreenDrawerlibStatic.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\ScreenDrawerlibStatic.dir\ScreenDrawerlibStatic.pdb
+  TARGET_FILE = D:\Project\CPP_HelperLib\libs\libScreenDrawerlibStatic.a
+  TARGET_PDB = D:\Project\CPP_HelperLib\libs\libScreenDrawerlibStatic.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target ScreenDrawerExample
@@ -86,7 +232,7 @@ build D$:/Project/CPP_HelperLib/bin/libScreenDrawerlib.dll D$:/Project/CPP_Helpe
 #############################################
 # Order-only phony target for ScreenDrawerExample
 
-build cmake_object_order_depends_target_ScreenDrawerExample: phony || cmake_object_order_depends_target_ScreenDrawerlib
+build cmake_object_order_depends_target_ScreenDrawerExample: phony || cmake_object_order_depends_target_ScreenDrawerlibStatic
 
 build CMakeFiles/ScreenDrawerExample.dir/examples/ScreenDrawer/ScreenDrawerExample.cpp.obj: CXX_COMPILER__ScreenDrawerExample_unscanned_Debug D$:/Project/CPP_HelperLib/examples/ScreenDrawer/ScreenDrawerExample.cpp || cmake_object_order_depends_target_ScreenDrawerExample
   DEP_FILE = CMakeFiles\ScreenDrawerExample.dir\examples\ScreenDrawer\ScreenDrawerExample.cpp.obj.d
@@ -105,9 +251,9 @@ build CMakeFiles/ScreenDrawerExample.dir/examples/ScreenDrawer/ScreenDrawerExamp
 #############################################
 # Link the executable D:\Project\CPP_HelperLib\bin\ScreenDrawerExample.exe
 
-build D$:/Project/CPP_HelperLib/bin/ScreenDrawerExample.exe: CXX_EXECUTABLE_LINKER__ScreenDrawerExample_Debug CMakeFiles/ScreenDrawerExample.dir/examples/ScreenDrawer/ScreenDrawerExample.cpp.obj | D$:/Project/CPP_HelperLib/libs/libScreenDrawerlib.dll.a || D$:/Project/CPP_HelperLib/bin/libScreenDrawerlib.dll
+build D$:/Project/CPP_HelperLib/bin/ScreenDrawerExample.exe: CXX_EXECUTABLE_LINKER__ScreenDrawerExample_Debug CMakeFiles/ScreenDrawerExample.dir/examples/ScreenDrawer/ScreenDrawerExample.cpp.obj | D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a || D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a
   FLAGS = -g
-  LINK_LIBRARIES = -static  D:/Project/CPP_HelperLib/libs/libScreenDrawerlib.dll.a  -lgdiplus  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -static  D:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a  -lgdiplus  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ScreenDrawerExample.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -123,7 +269,7 @@ build D$:/Project/CPP_HelperLib/bin/ScreenDrawerExample.exe: CXX_EXECUTABLE_LINK
 #############################################
 # Order-only phony target for ScreenDrawerExampleSimple
 
-build cmake_object_order_depends_target_ScreenDrawerExampleSimple: phony || cmake_object_order_depends_target_ScreenDrawerlib
+build cmake_object_order_depends_target_ScreenDrawerExampleSimple: phony || cmake_object_order_depends_target_ScreenDrawerlibStatic
 
 build CMakeFiles/ScreenDrawerExampleSimple.dir/examples/ScreenDrawer/ScreenDrawerExampleSimple.cpp.obj: CXX_COMPILER__ScreenDrawerExampleSimple_unscanned_Debug D$:/Project/CPP_HelperLib/examples/ScreenDrawer/ScreenDrawerExampleSimple.cpp || cmake_object_order_depends_target_ScreenDrawerExampleSimple
   DEP_FILE = CMakeFiles\ScreenDrawerExampleSimple.dir\examples\ScreenDrawer\ScreenDrawerExampleSimple.cpp.obj.d
@@ -142,9 +288,9 @@ build CMakeFiles/ScreenDrawerExampleSimple.dir/examples/ScreenDrawer/ScreenDrawe
 #############################################
 # Link the executable D:\Project\CPP_HelperLib\bin\ScreenDrawerExampleSimple.exe
 
-build D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimple.exe: CXX_EXECUTABLE_LINKER__ScreenDrawerExampleSimple_Debug CMakeFiles/ScreenDrawerExampleSimple.dir/examples/ScreenDrawer/ScreenDrawerExampleSimple.cpp.obj | D$:/Project/CPP_HelperLib/libs/libScreenDrawerlib.dll.a || D$:/Project/CPP_HelperLib/bin/libScreenDrawerlib.dll
+build D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimple.exe: CXX_EXECUTABLE_LINKER__ScreenDrawerExampleSimple_Debug CMakeFiles/ScreenDrawerExampleSimple.dir/examples/ScreenDrawer/ScreenDrawerExampleSimple.cpp.obj | D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a || D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a
   FLAGS = -g
-  LINK_LIBRARIES = -static  D:/Project/CPP_HelperLib/libs/libScreenDrawerlib.dll.a  -lgdiplus  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = -static  D:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a  -lgdiplus  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ScreenDrawerExampleSimple.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -179,6 +325,14 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build KeyboardListenerExample: phony D$:/Project/CPP_HelperLib/bin/KeyboardListenerExample.exe
+
+build KeyboardListenerExample.exe: phony D$:/Project/CPP_HelperLib/bin/KeyboardListenerExample.exe
+
+build KeyboardListenerlibShared: phony D$:/Project/CPP_HelperLib/bin/libKeyboardListenerlibShared.dll
+
+build KeyboardListenerlibStatic: phony D$:/Project/CPP_HelperLib/libs/libKeyboardListenerlibStatic.a
+
 build ScreenDrawerExample: phony D$:/Project/CPP_HelperLib/bin/ScreenDrawerExample.exe
 
 build ScreenDrawerExample.exe: phony D$:/Project/CPP_HelperLib/bin/ScreenDrawerExample.exe
@@ -187,9 +341,17 @@ build ScreenDrawerExampleSimple: phony D$:/Project/CPP_HelperLib/bin/ScreenDrawe
 
 build ScreenDrawerExampleSimple.exe: phony D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimple.exe
 
-build ScreenDrawerlib: phony D$:/Project/CPP_HelperLib/bin/libScreenDrawerlib.dll
+build ScreenDrawerlibShared: phony D$:/Project/CPP_HelperLib/bin/libScreenDrawerlibShared.dll
 
-build libScreenDrawerlib.dll: phony D$:/Project/CPP_HelperLib/bin/libScreenDrawerlib.dll
+build ScreenDrawerlibStatic: phony D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a
+
+build libKeyboardListenerlibShared.dll: phony D$:/Project/CPP_HelperLib/bin/libKeyboardListenerlibShared.dll
+
+build libKeyboardListenerlibStatic.a: phony D$:/Project/CPP_HelperLib/libs/libKeyboardListenerlibStatic.a
+
+build libScreenDrawerlibShared.dll: phony D$:/Project/CPP_HelperLib/bin/libScreenDrawerlibShared.dll
+
+build libScreenDrawerlibStatic.a: phony D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a
 
 # =============================================================================
 # Folder targets.
@@ -199,7 +361,7 @@ build libScreenDrawerlib.dll: phony D$:/Project/CPP_HelperLib/bin/libScreenDrawe
 #############################################
 # Folder: D:/Project/CPP_HelperLib/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)
 
-build all: phony D$:/Project/CPP_HelperLib/bin/libScreenDrawerlib.dll D$:/Project/CPP_HelperLib/bin/ScreenDrawerExample.exe D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimple.exe
+build all: phony D$:/Project/CPP_HelperLib/bin/libKeyboardListenerlibShared.dll D$:/Project/CPP_HelperLib/libs/libKeyboardListenerlibStatic.a D$:/Project/CPP_HelperLib/bin/KeyboardListenerExample.exe D$:/Project/CPP_HelperLib/bin/libScreenDrawerlibShared.dll D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a D$:/Project/CPP_HelperLib/bin/ScreenDrawerExample.exe D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimple.exe
 
 # =============================================================================
 # Unknown Build Time Dependencies.

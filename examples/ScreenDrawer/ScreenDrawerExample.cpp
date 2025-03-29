@@ -45,26 +45,20 @@ void drawFunction(Gdiplus::Graphics *graphics, int screenWidth, int screenHeight
     graphics->FillRectangle(&rectBrush, rect);
 }
 
+void printHello(){
+    std::cout << "Hello" << std::endl;
+    // screenDrawer->setZOrder(WINDOW_HANDLE_NOTOPMOST);
+    
+}
+
 int main()
 {
     HINSTANCE hInstance = GetModuleHandle(NULL);
     try
     {
-        ScreenDrawer screenDrawer(hInstance);
-        screenDrawer.setDrawFunction(drawFunction);
-        screenDrawer.createWindowF("Window 1");
-        screenDrawer.setZOrder(WINDOW_HANDLE_TOPMOST);
-        screenDrawer.updateScreen();
-        screenDrawer.showNotificationBar();
-        std::thread updateThread([&screenDrawer]()
-                                 {
-            while (screenDrawer.isWindowRunning())
-            {
-                screenDrawer.updateScreen();
-                std::this_thread::sleep_for(std::chrono::milliseconds(10));
-            } });
-        updateThread.join();
-        screenDrawer.destroyWindow();
+        ScreenDrawer screenDrawer("ScreenDrawerExample",10, drawFunction);
+        screenDrawer.addMenuItem(1, "Hello", printHello);
+        screenDrawer.joinMainThread();
     }
     catch (const std::runtime_error &e)
     {

@@ -157,7 +157,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=KeyboardListener
+CMAKE_PROJECT_NAME:STATIC=CPPHelperLibs
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=0.1.0
@@ -258,16 +258,19 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-KeyboardListener_BINARY_DIR:STATIC=D:/Project/CPP_HelperLib/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)
+CPPHelperLibs_BINARY_DIR:STATIC=D:/Project/CPP_HelperLib/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)
 
 //Value Computed by CMake
-KeyboardListener_IS_TOP_LEVEL:STATIC=ON
+CPPHelperLibs_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-KeyboardListener_SOURCE_DIR:STATIC=D:/Project/CPP_HelperLib
+CPPHelperLibs_SOURCE_DIR:STATIC=D:/Project/CPP_HelperLib
 
 //Dependencies for the target
-ScreenDrawerlib_LIB_DEPENDS:STATIC=general;gdiplus;
+ScreenDrawerlibShared_LIB_DEPENDS:STATIC=general;gdiplus;
+
+//Dependencies for the target
+ScreenDrawerlibStatic_LIB_DEPENDS:STATIC=general;gdiplus;
 
 
 ########################

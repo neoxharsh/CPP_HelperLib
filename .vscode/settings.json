@@ -78,7 +78,7 @@
         "variant": "cpp"
     },
     "cmake.configureArgs": [
-        "-DKEYBOARD_LIBRARY=OFF"
+        "-DKEYBOARD_LIBRARY=ON"
     ]
         
     

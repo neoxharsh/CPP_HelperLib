@@ -18,6 +18,34 @@ ScreenDrawer::ScreenDrawer(HINSTANCE hInstance) : hInstance(hInstance)
     Gdiplus::GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
 }
 
+ScreenDrawer::ScreenDrawer(const char *CLASS_NAME, int updateInterval, void (*drawFunction)(Gdiplus::Graphics *graphics, int screenWidth, int screenHeight))
+{
+    
+    try
+    {
+        Gdiplus::GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
+        this->drawFunction = drawFunction;
+        createWindowF(CLASS_NAME);
+        setZOrder(WINDOW_HANDLE_TOPMOST);
+        updateScreen();
+        showNotificationBar();
+        updateThread = new std::thread([](ScreenDrawer* drawer, int updateInterval)
+                                 {
+            while (drawer->isWindowRunning())
+            {
+                drawer->updateScreen();
+                std::this_thread::sleep_for(std::chrono::milliseconds(updateInterval));
+            } }, this,updateInterval);
+        // updateThread->join();
+    }
+    catch (const std::runtime_error &e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+}
+
+
+
 ScreenDrawer::~ScreenDrawer()
 {
     try
@@ -38,6 +66,8 @@ ScreenDrawer::~ScreenDrawer()
         std::cerr << "Unknown exception in destructor" << std::endl;
     }
 }
+
+
 
 void ScreenDrawer::createWindowF(const char *CLASS_NAME)
 {
@@ -171,6 +201,22 @@ LRESULT CALLBACK ScreenDrawer::WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, L
             pThis->isRunnnig = false;
             PostQuitMessage(0);
             DestroyWindow(hwnd);
+        }
+        switch (LOWORD(wParam))
+        {
+        case IDM_TOPMOST:
+            pThis->setZOrder(WINDOW_HANDLE_TOPMOST);
+            break;
+        case IDM_NOTOPMOST:
+            pThis->setZOrder(WINDOW_HANDLE_NOTOPMOST);
+            break;
+        case IDM_FIRST:
+            pThis->setZOrder(WINDOW_HANDLE_FIRST);
+            break;
+        case IDM_LAST:
+            pThis->setZOrder(WINDOW_HANDLE_LAST);
+            break;
+            
         }
         return 0;
     }
@@ -310,5 +356,13 @@ void ScreenDrawer::addMenuSeparator()
     if (hMenu)
     {
         AppendMenu(hMenu, MF_SEPARATOR, 0, NULL);
+    }
+}
+
+void ScreenDrawer::joinMainThread()
+{
+    if (updateThread)
+    {
+        updateThread->join();
     }
 }
