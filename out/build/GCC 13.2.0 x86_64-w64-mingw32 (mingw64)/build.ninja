@@ -299,6 +299,43 @@ build D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimple.exe: CXX_EXECUTABL
   TARGET_IMPLIB = D:\Project\CPP_HelperLib\libs\libScreenDrawerExampleSimple.dll.a
   TARGET_PDB = D:\Project\CPP_HelperLib\bin\ScreenDrawerExampleSimple.pdb
 
+# =============================================================================
+# Object build statements for EXECUTABLE target ScreenDrawerExampleSimpleTransparentToggle
+
+
+#############################################
+# Order-only phony target for ScreenDrawerExampleSimpleTransparentToggle
+
+build cmake_object_order_depends_target_ScreenDrawerExampleSimpleTransparentToggle: phony || cmake_object_order_depends_target_ScreenDrawerlibStatic
+
+build CMakeFiles/ScreenDrawerExampleSimpleTransparentToggle.dir/examples/ScreenDrawer/ScreenDrawerTransparentToggle.cpp.obj: CXX_COMPILER__ScreenDrawerExampleSimpleTransparentToggle_unscanned_Debug D$:/Project/CPP_HelperLib/examples/ScreenDrawer/ScreenDrawerTransparentToggle.cpp || cmake_object_order_depends_target_ScreenDrawerExampleSimpleTransparentToggle
+  DEP_FILE = CMakeFiles\ScreenDrawerExampleSimpleTransparentToggle.dir\examples\ScreenDrawer\ScreenDrawerTransparentToggle.cpp.obj.d
+  FLAGS = -g
+  INCLUDES = -ID:/Project/CPP_HelperLib/include -ID:/msys64/usr/include/python3.11
+  OBJECT_DIR = CMakeFiles\ScreenDrawerExampleSimpleTransparentToggle.dir
+  OBJECT_FILE_DIR = CMakeFiles\ScreenDrawerExampleSimpleTransparentToggle.dir\examples\ScreenDrawer
+  TARGET_COMPILE_PDB = CMakeFiles\ScreenDrawerExampleSimpleTransparentToggle.dir\
+  TARGET_PDB = D:\Project\CPP_HelperLib\bin\ScreenDrawerExampleSimpleTransparentToggle.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target ScreenDrawerExampleSimpleTransparentToggle
+
+
+#############################################
+# Link the executable D:\Project\CPP_HelperLib\bin\ScreenDrawerExampleSimpleTransparentToggle.exe
+
+build D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimpleTransparentToggle.exe: CXX_EXECUTABLE_LINKER__ScreenDrawerExampleSimpleTransparentToggle_Debug CMakeFiles/ScreenDrawerExampleSimpleTransparentToggle.dir/examples/ScreenDrawer/ScreenDrawerTransparentToggle.cpp.obj | D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a || D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a
+  FLAGS = -g
+  LINK_LIBRARIES = -static  D:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a  -lgdiplus  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\ScreenDrawerExampleSimpleTransparentToggle.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\ScreenDrawerExampleSimpleTransparentToggle.dir\
+  TARGET_FILE = D:\Project\CPP_HelperLib\bin\ScreenDrawerExampleSimpleTransparentToggle.exe
+  TARGET_IMPLIB = D:\Project\CPP_HelperLib\libs\libScreenDrawerExampleSimpleTransparentToggle.dll.a
+  TARGET_PDB = D:\Project\CPP_HelperLib\bin\ScreenDrawerExampleSimpleTransparentToggle.pdb
+
 
 #############################################
 # Utility command for edit_cache
@@ -341,6 +378,10 @@ build ScreenDrawerExampleSimple: phony D$:/Project/CPP_HelperLib/bin/ScreenDrawe
 
 build ScreenDrawerExampleSimple.exe: phony D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimple.exe
 
+build ScreenDrawerExampleSimpleTransparentToggle: phony D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimpleTransparentToggle.exe
+
+build ScreenDrawerExampleSimpleTransparentToggle.exe: phony D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimpleTransparentToggle.exe
+
 build ScreenDrawerlibShared: phony D$:/Project/CPP_HelperLib/bin/libScreenDrawerlibShared.dll
 
 build ScreenDrawerlibStatic: phony D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a
@@ -361,7 +402,7 @@ build libScreenDrawerlibStatic.a: phony D$:/Project/CPP_HelperLib/libs/libScreen
 #############################################
 # Folder: D:/Project/CPP_HelperLib/out/build/GCC 13.2.0 x86_64-w64-mingw32 (mingw64)
 
-build all: phony D$:/Project/CPP_HelperLib/bin/libKeyboardListenerlibShared.dll D$:/Project/CPP_HelperLib/libs/libKeyboardListenerlibStatic.a D$:/Project/CPP_HelperLib/bin/KeyboardListenerExample.exe D$:/Project/CPP_HelperLib/bin/libScreenDrawerlibShared.dll D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a D$:/Project/CPP_HelperLib/bin/ScreenDrawerExample.exe D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimple.exe
+build all: phony D$:/Project/CPP_HelperLib/bin/libKeyboardListenerlibShared.dll D$:/Project/CPP_HelperLib/libs/libKeyboardListenerlibStatic.a D$:/Project/CPP_HelperLib/bin/KeyboardListenerExample.exe D$:/Project/CPP_HelperLib/bin/libScreenDrawerlibShared.dll D$:/Project/CPP_HelperLib/libs/libScreenDrawerlibStatic.a D$:/Project/CPP_HelperLib/bin/ScreenDrawerExample.exe D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimple.exe D$:/Project/CPP_HelperLib/bin/ScreenDrawerExampleSimpleTransparentToggle.exe
 
 # =============================================================================
 # Unknown Build Time Dependencies.

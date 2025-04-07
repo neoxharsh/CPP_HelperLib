@@ -29,7 +29,7 @@ public:
     bool isWindowRunning();
     void destroyWindow();
     void joinMainThread();
-    
+    void setWindowTransparent(bool isTransparent);
     void addMenuItem(UINT uIDNewItem, const char *lpNewItem, std::function<void()> callback);
     void addMenuSeparator();
 

@@ -13,6 +13,7 @@
 #define IDM_FIRST 1003
 #define IDM_LAST 1004
 
+
 ScreenDrawer::ScreenDrawer(HINSTANCE hInstance) : hInstance(hInstance)
 {
     Gdiplus::GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, NULL);
@@ -87,6 +88,25 @@ void ScreenDrawer::createWindow(const char *CLASS_NAME, int width, int height)
     sdWindowThread.detach();
 }
 
+void ScreenDrawer::setWindowTransparent(bool isTransparent)
+{
+    if (windowsHandle)
+    {
+        int nExStyle = GetWindowLong(windowsHandle, GWL_EXSTYLE);  
+       
+
+        if (isTransparent)
+        {
+            SetWindowLong(windowsHandle, GWL_EXSTYLE, (nExStyle | WS_EX_TRANSPARENT)); 
+        }
+        else
+        {
+            SetWindowLong(windowsHandle, GWL_EXSTYLE, (nExStyle & ~WS_EX_TRANSPARENT)); 
+        }
+        
+    }
+}
+
 void ScreenDrawer::_createWindow(const char *CLASS_NAME, int width, int height)
 {
     WNDCLASS wc = {};
@@ -94,6 +114,7 @@ void ScreenDrawer::_createWindow(const char *CLASS_NAME, int width, int height)
     wc.hInstance = hInstance;
     wc.lpszClassName = CLASS_NAME;
     wc.hbrBackground = (HBRUSH)GetStockObject(NULL_BRUSH);
+    wc.hCursor = LoadCursor(NULL, IDC_ARROW);
      // Convert to std::string
      std::string str = CLASS_NAME;
     
@@ -105,7 +126,7 @@ void ScreenDrawer::_createWindow(const char *CLASS_NAME, int width, int height)
     }
 
     windowsHandle = CreateWindowEx(
-        WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOOLWINDOW,
+        WS_EX_LAYERED  | WS_EX_TRANSPARENT | WS_EX_TOOLWINDOW,
         CLASS_NAME,
         CLASS_NAME,
         WS_POPUP,
@@ -256,6 +277,7 @@ void ScreenDrawer::CreateLayeredWindow(HWND hwnd, int width, int height, void (*
     POINT ptDst = {0, 0};
 
     UpdateLayeredWindow(hwnd, hdc, &ptDst, &sizeWnd, hdcMem, &ptSrc, 0, &blend, ULW_ALPHA);
+
 
     SelectObject(hdcMem, hOld);
     DeleteObject(hbmMem);
